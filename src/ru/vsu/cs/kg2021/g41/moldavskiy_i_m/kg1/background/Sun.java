@@ -1,10 +1,24 @@
 package ru.vsu.cs.kg2021.g41.moldavskiy_i_m.kg1.background;
 
+import ru.vsu.cs.kg2021.g41.moldavskiy_i_m.kg1.DrawableObject;
+
 import java.awt.*;
 
-public class Sun {
+public class Sun extends DrawableObject {
 
-    public static void drawSun(Graphics2D g, int x, int y, int rInner, int rOuter, int n, Color c) {
+    private int rInner, rOuter, n;
+    private Color c;
+
+    public Sun(int x, int y, int width, int height, int rInner, int rOuter, int n, Color c) {
+        super(x, y, width, height);
+        this.rInner = rInner;
+        this.rOuter = rOuter;
+        this.n = n;
+        this.c = c;
+    }
+
+    @Override
+    public void draw(Graphics2D g, int w, int h) {
         Color oldC = g.getColor();
         g.setColor(c);
 
