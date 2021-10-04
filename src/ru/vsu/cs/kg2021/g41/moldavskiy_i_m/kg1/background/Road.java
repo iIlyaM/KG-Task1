@@ -12,9 +12,9 @@ public class Road extends DrawableObject {
 
     public Road(int x, int y, int width, int height) {
         super(x, y, width, height);
-        this.marks.add(new RoadMark(x + 200, y , width , height ));
-        this.marks.add(new RoadMark(x + 600, y , width , height ));
-        this.marks.add(new RoadMark(x + 1000, y , width , height ));
+        for (int i = 0; i < 20; i++) {
+            this.marks.add(new RoadMark(x + i * 85, y , width/3 , height ));
+        }
         this.fence.add(new Fence(x, y, width, height));
     }
 
