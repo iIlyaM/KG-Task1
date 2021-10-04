@@ -12,19 +12,6 @@ public class Cloud extends DrawableObject {
     }
 
 
-
-    public static void drawCloudTypeTwo(Graphics2D gr, int x, int y, int rWidth, int rHeight) {
-        Ellipse2D.Double elp1 = new Ellipse2D.Double(x + rWidth *.35, y - rHeight * .2,
-                rWidth * 1.75, rHeight * 1.4 );
-        Ellipse2D.Double elp2 = new Ellipse2D.Double(x, y, rWidth, rHeight );
-        Ellipse2D.Double elp3 = new Ellipse2D.Double(x + rWidth * 1.5, y + rHeight * .15,
-                rWidth * .9, rHeight * .9 );
-        gr.setColor(Color.WHITE);
-        gr.fill(elp1);
-        gr.fill(elp2);
-        gr.fill(elp3);
-    }
-
     @Override
     public void draw(Graphics2D g, int w, int h) {
         Ellipse2D.Double e1 = new Ellipse2D.Double(x + this.width * .30, y - this.height * .3,
